@@ -1,0 +1,276 @@
+/* Wearly - Responsive Styles */
+
+/* Tablet - 1024px and below */
+@media (max-width: 1024px) {
+    .grid-4 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .hero-title {
+        font-size: var(--font-size-3xl);
+    }
+    
+    .section-title {
+        font-size: var(--font-size-2xl);
+    }
+}
+
+/* Tablet - 768px and below */
+@media (max-width: 768px) {
+    :root {
+        --font-size-4xl: 2rem;
+        --font-size-3xl: 1.75rem;
+        --font-size-2xl: 1.5rem;
+    }
+    
+    .container {
+        padding: 0 var(--spacing-md);
+    }
+    
+    /* Navbar */
+    .menu-toggle {
+        display: flex;
+    }
+    
+    .navbar-nav {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: var(--background-white);
+        flex-direction: column;
+        padding: var(--spacing-lg);
+        box-shadow: 0 4px 12px var(--shadow-medium);
+        transform: translateX(-100%);
+        transition: transform var(--transition-normal);
+        gap: var(--spacing-md);
+        z-index: 999;
+    }
+    
+    .navbar-nav.active {
+        transform: translateX(0);
+    }
+    
+    .navbar-nav a {
+        width: 100%;
+        text-align: center;
+        padding: var(--spacing-md);
+    }
+    
+    /* Grid */
+    .grid-4,
+    .grid-3,
+    .grid-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Hero */
+    .hero {
+        padding: var(--spacing-2xl) 0;
+    }
+    
+    .hero-title {
+        font-size: var(--font-size-2xl);
+    }
+    
+    .hero-description {
+        font-size: var(--font-size-base);
+    }
+    
+    /* Sections */
+    .section {
+        padding: var(--spacing-2xl) 0;
+    }
+    
+    /* Cards */
+    .product-card,
+    .review-card,
+    .category-card {
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    /* Modal */
+    .modal-content {
+        max-width: 95%;
+        margin: var(--spacing-md);
+    }
+    
+    /* Filter Buttons */
+    .filter-buttons {
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: var(--spacing-sm);
+    }
+    
+    .filter-btn {
+        white-space: nowrap;
+    }
+    
+    /* Product Actions */
+    .product-actions {
+        flex-direction: column;
+    }
+    
+    .product-actions .btn {
+        width: 100%;
+    }
+    
+    /* Login Form */
+    .login-form {
+        padding: var(--spacing-xl);
+        margin: var(--spacing-md);
+    }
+    
+    .login-container::before {
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+}
+
+/* Mobile - 480px and below */
+@media (max-width: 480px) {
+    :root {
+        --spacing-xl: 1.5rem;
+        --spacing-2xl: 2rem;
+        --spacing-3xl: 3rem;
+    }
+    
+    /* Grid */
+    .grid-4,
+    .grid-3,
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Typography */
+    h1 {
+        font-size: var(--font-size-2xl);
+    }
+    
+    h2 {
+        font-size: var(--font-size-xl);
+    }
+    
+    /* Hero */
+    .hero-title {
+        font-size: var(--font-size-xl);
+    }
+    
+    .hero-description {
+        font-size: var(--font-size-sm);
+    }
+    
+    .btn {
+        padding: var(--spacing-sm) var(--spacing-lg);
+        font-size: var(--font-size-sm);
+    }
+    
+    /* Cards */
+    .card-body,
+    .product-info,
+    .collection-info {
+        padding: var(--spacing-md);
+    }
+    
+    .product-image,
+    .category-image,
+    .collection-image {
+        height: 200px;
+    }
+    
+    /* Navbar */
+    .navbar-brand {
+        font-size: var(--font-size-lg);
+    }
+    
+    .navbar-logo {
+        width: 32px;
+        height: 32px;
+    }
+    
+    /* Footer */
+    .social-links {
+        justify-content: center;
+    }
+    
+    /* Section Title */
+    .section-title {
+        font-size: var(--font-size-xl);
+    }
+    
+    /* Service Cards */
+    .service-card {
+        padding: var(--spacing-lg);
+    }
+    
+    .service-icon {
+        font-size: var(--font-size-3xl);
+    }
+    
+    /* Review Cards */
+    .review-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    /* Modal */
+    .modal-header,
+    .modal-body {
+        padding: var(--spacing-md);
+    }
+    
+    .modal-image {
+        height: 200px;
+    }
+}
+
+/* Small Mobile - 320px and below */
+@media (max-width: 320px) {
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .btn {
+        padding: var(--spacing-xs) var(--spacing-md);
+        font-size: var(--font-size-xs);
+    }
+    
+    .login-form {
+        padding: var(--spacing-lg);
+    }
+}
+
+/* Landscape Orientation */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero {
+        padding: var(--spacing-xl) 0;
+    }
+    
+    .section {
+        padding: var(--spacing-xl) 0;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .navbar,
+    .footer,
+    .btn,
+    .menu-toggle {
+        display: none;
+    }
+    
+    .section {
+        page-break-inside: avoid;
+    }
+}
+

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Wearly</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="../index.html" class="navbar-brand">
+                <div class="navbar-logo">W</div>
+                <span>Wearly</span>
+            </a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="navbar-nav" id="navbarNav">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="products.html" class="nav-link">Products</a></li>
+                <li><a href="about.html" class="nav-link active">About</a></li>
+                <li><a href="review.html" class="nav-link">Review</a></li>
+                <li><a href="service.html" class="nav-link">Service</a></li>
+                <li><a href="login.html" class="nav-link">Login</a></li>
+                <li><a href="products.html" class="nav-link cart-badge">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Our Collections</h2>
+            
+            <!-- Collection Blocks -->
+            <div class="collection-block" data-collection="1">
+                <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=500&fit=crop" alt="Spring Collection" class="collection-image">
+                <div class="collection-info">
+                    <h3 class="collection-title">Spring Collection 2025</h3>
+                    <p class="collection-description">Discover our latest spring collection featuring vibrant colors and fresh designs. Perfect for the season with comfortable fabrics and modern styles.</p>
+                    <button class="btn btn-secondary view-more-btn" data-collection="1">Click to View More</button>
+                </div>
+            </div>
+
+            <div class="collection-block" data-collection="2">
+                <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=800&h=500&fit=crop" alt="Summer Collection" class="collection-image">
+                <div class="collection-info">
+                    <h3 class="collection-title">Summer Essentials</h3>
+                    <p class="collection-description">Stay cool and stylish with our summer essentials. Lightweight materials and breathable fabrics designed for comfort in warm weather.</p>
+                    <button class="btn btn-secondary view-more-btn" data-collection="2">Click to View More</button>
+                </div>
+            </div>
+
+            <div class="collection-block" data-collection="3">
+                <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=800&h=500&fit=crop" alt="Casual Collection" class="collection-image">
+                <div class="collection-info">
+                    <h3 class="collection-title">Casual Wear</h3>
+                    <p class="collection-description">Everyday comfort meets style. Our casual collection offers versatile pieces perfect for any occasion, from work to weekend.</p>
+                    <button class="btn btn-secondary view-more-btn" data-collection="3">Click to View More</button>
+                </div>
+            </div>
+
+            <div class="collection-block" data-collection="4">
+                <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800&h=500&fit=crop" alt="Formal Collection" class="collection-image">
+                <div class="collection-info">
+                    <h3 class="collection-title">Formal Attire</h3>
+                    <p class="collection-description">Elegant and sophisticated formal wear for special occasions. Premium quality fabrics and impeccable tailoring for the perfect fit.</p>
+                    <button class="btn btn-secondary view-more-btn" data-collection="4">Click to View More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal" id="collectionModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="modalTitle">Collection Details</h3>
+                <button class="modal-close" id="modalClose">&times;</button>
+            </div>
+            <div class="modal-body">
+                <img src="" alt="Collection Image" class="modal-image" id="modalImage">
+                <div class="modal-details" id="modalDetails">
+                    <!-- Details will be populated by JavaScript -->
+                </div>
+                <div class="modal-price" id="modalPrice"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Wearly</h3>
+                    <p>Your one-stop destination for stylish and affordable clothing. We offer the latest fashion trends with quality you can trust.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="review.html">Reviews</a></li>
+                        <li><a href="service.html">Services</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p>Email: info@wearly.com</p>
+                    <p>Phone: +1 (555) 123-4567</p>
+                    <p>Address: 123 Fashion Street, Style City, SC 12345</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Wearly. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/about.js"></script>
+</body>
+</html>
+
